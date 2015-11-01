@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+    <% @posts.order(created_at: :desc).each do |post| %>
+    <div style="float:left; height:150px; width:150px;">
+      <tr>
+        <td><%= image_tag post.image(:med) if post.image.present? %></td>
+        <td><%= post.body %></td><br>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+      </tr></div>
+    <% end %>
+
+<br>
+<div style="clear:both;">
+<%= link_to 'New Post', new_post_path %></div>

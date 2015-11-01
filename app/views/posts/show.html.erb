@@ -1,0 +1,19 @@
+
+
+
+<%= image_tag @post.image(:large) %>
+
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.body %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Destroy', @post,  method: :delete, data: { confirm: 'Are you sure?' } %>|
+<%= link_to 'Back', posts_path %>
+
+
