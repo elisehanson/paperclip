@@ -8,22 +8,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
 
   <script>
-
-//   $(window).load( function() {
-  
-//   $('.grid').isotope({
-//     itemSelector: '.grid-item',
-//     masonry: {
-//       columnWidth: 320
-//     }
-//   });
-
-// });
-
-
-   $(document).on("scroll", function(){
+$(document).on("scroll", function(){
     if
       ($(document).scrollTop() > 100){
       $("header").addClass("shrink");
@@ -35,6 +23,7 @@
       updateSliderMargin();
     }
   });
+
   </script>
 
 </head>
@@ -59,15 +48,6 @@
       </ul>
     </nav></header>
     
-<!--     <img src="https://soylent-production-herokuapp-com.global.ssl.fastly.net/static/images/drink_homehero.2364b1811c78.jpg"> -->
-
-
-
-
-
-
-
-
 
 <!--   <li><%= link_to "Home",       root_path %></li>
 

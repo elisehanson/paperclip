@@ -12,12 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 
 
-  $(window).load( function() {
+$(document).ready(function() {
   
+
+var $grid = jQuery('.grid');
+
+$(".grid").imagesLoaded(function(){
+
   $('.grid').isotope({
     itemSelector: '.grid-item',
     masonry: {
@@ -25,18 +30,7 @@
     }
   });
 
+  $grid.isotope('reloadItems');
 });
-
-  //   $(document).on("scroll", function(){
-  //   if
-  //     ($(document).scrollTop() > 100){
-  //     $("header").addClass("shrink");
-  //     updateSliderMargin();
-  //   }
-  //   else
-  //   {
-  //     $("header").removeClass("shrink");
-  //     updateSliderMargin();
-  //   }
-  // });
+});
 
