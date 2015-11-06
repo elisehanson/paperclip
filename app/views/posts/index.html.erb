@@ -2,17 +2,18 @@
 
 <h1>Listing Posts</h1>
 
+<i><%= link_to 'New Post', new_post_path %></i>
+ <div class="grid">
+     <div class="index-picture grid-item">
     <% @posts.order(created_at: :desc).each do |post| %>
-    <div style="float:left; height:150px; width:150px;">
+    <div class="grid-item">
       <tr>
-        <td><%= image_tag post.image(:med) if post.image.present? %></td>
-        <td><%= post.body %></td><br>
+        <td><%= image_tag post.image(:large) if post.image.present? %></td>
+        <td><%= post.body %></td><br><div class="index">
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> </div>
       </tr></div>
     <% end %>
-
+</div>
 <br>
-<div style="clear:both;">
-<%= link_to 'New Post', new_post_path %></div>

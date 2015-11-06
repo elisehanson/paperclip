@@ -13,3 +13,176 @@
  *= require_tree .
  *= require_self
  */
+
+
+.site-container {
+    padding-top: 150px;
+}
+
+h1, h2{
+    font-family: 'Montserrat', arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+   font-weight: 100;
+   letter-spacing: 4px;
+
+}
+
+header {
+  font-family: 'Montserrat', arial, sans-serif;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 4px;
+  border-bottom: solid black 1px;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 100;
+    width: 100%;
+  padding: 60px 0;
+/*  background: #fff;*/
+  border-bottom: 1px solid #e1e1e1;
+
+  /* animation magic */
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out ;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+}
+
+nav li {
+  color: #000000;
+  display: inline;
+  padding: 100px 40px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  padding-top: 65px;
+}
+
+.other {
+  text-align: right;
+}
+
+.shrink {
+  padding: 20px 0;
+}
+
+
+
+
+label {
+  font-family: helvetica;
+  font-size: 10px;
+  font-style: bold;
+}
+
+
+input {
+text-transform: uppercase;
+  border: 1px solid #333;
+  padding: 13px 10px;
+  width:313px;
+    font-size: 10px;
+  letter-spacing: 3px;
+  text-align: left;
+  margin:10px;
+  }
+
+textarea {
+  border: 1px solid black;
+  padding:100px;
+}
+
+.button {
+  background-color:#fff;
+  font-family: 'Montserrat', arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 100;
+  letter-spacing: 4px;
+  width:332px;
+  text-align: center;
+
+}
+
+.button, .button:link, .button:visited {
+  padding: 13px 0;
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  transition: all .2s ease-in-out;
+}
+  
+  .button:hover {
+    background: #333;
+    border: 1px solid #333;
+    color: #fefefe;
+   /* border-radius: 30px;*/
+  }
+
+
+i {
+  font-family: 'Montserrat', arial, sans-serif;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+.index {
+  font-family: 'Montserrat', arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding-top: 10px;
+
+}
+
+.gutter {
+  text-align: center;
+}
+
+
+.grid {
+  background: #fff;
+  max-width: 1400px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 300px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-color: #fff;
+}
+
+
+img {
+  max-width:100%;
+  max-height:100%;
+}

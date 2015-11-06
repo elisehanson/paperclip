@@ -6,10 +6,70 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+
+  <script>
+
+//   $(window).load( function() {
+  
+//   $('.grid').isotope({
+//     itemSelector: '.grid-item',
+//     masonry: {
+//       columnWidth: 320
+//     }
+//   });
+
+// });
+
+
+   $(document).on("scroll", function(){
+    if
+      ($(document).scrollTop() > 100){
+      $("header").addClass("shrink");
+      updateSliderMargin();
+    }
+    else
+    {
+      $("header").removeClass("shrink");
+      updateSliderMargin();
+    }
+  });
+  </script>
+
 </head>
 <body>
 
-  <li><%= link_to "Home",       root_path %></li>
+
+
+<html> 
+  <body><header>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+          <% if user_signed_in? %> 
+        <li><%= link_to "Profile", edit_user_registration_path %></a></li>
+        <li> <%= link_to "Settings", edit_user_registration_path %></a></li>
+          <span class="other">
+        <li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+          <% else %>  
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% end %>
+        </span>
+      </ul>
+    </nav></header>
+    
+<!--     <img src="https://soylent-production-herokuapp-com.global.ssl.fastly.net/static/images/drink_homehero.2364b1811c78.jpg"> -->
+
+
+
+
+
+
+
+
+
+<!--   <li><%= link_to "Home",       root_path %></li>
 
   <% if user_signed_in? %> 
     <li id="fat-menu" class="dropdown">
@@ -28,15 +88,20 @@
   <% else %>  
     <li><%= link_to "Sign in", new_user_session_path %></li>
   <% end %>    
-</ul>
+</ul></div> -->
+
+
+
+<div class="posts"><div class="site-container">
 
 	<p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
+       <div class="gutter">
 
 <%= yield %>
 
-
+</div></div></div>
 
 </body>
 </html>

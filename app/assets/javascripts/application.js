@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+  $(window).load( function() {
+  
+  $('.grid').isotope({
+    itemSelector: '.grid-item',
+    masonry: {
+      columnWidth: 320
+    }
+  });
+
+});
+
+  //   $(document).on("scroll", function(){
+  //   if
+  //     ($(document).scrollTop() > 100){
+  //     $("header").addClass("shrink");
+  //     updateSliderMargin();
+  //   }
+  //   else
+  //   {
+  //     $("header").removeClass("shrink");
+  //     updateSliderMargin();
+  //   }
+  // });
+

@@ -7,12 +7,12 @@
     <%= f.text_area :body %>
   </div>
    <div class="field">
-    <%= f.label :image %> 
+<!--     <%= f.label :image %>  -->
 <%= f.file_field :image %> 
  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "post", :class => "button" %>
   </div>
 
 <% end %>
